@@ -1,0 +1,7 @@
+t01,George,Gershwin,0412908456,information security&artificial intelligence,q,q
+t02,Ros,Bandt,0422970135,python,w,w
+t03,Frederic,Chopin,0401457356,information security,e,e
+t05,Percy,Grainger,0457353469,information security&python,r,r
+t07,Gustav,Holst,0478456988,artificial intelligence,t,t
+t08,Imogen,Holst,0491035836,python,y,y
+t10,Antonio,Vivaldi,0498135683,artificial intelligence&information security,u,u

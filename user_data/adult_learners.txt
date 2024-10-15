@@ -1,0 +1,6 @@
+s0001,Albert,Einstein,0312565924,python&information security&artificial intelligence,1,1
+s0002,Marie,Curie,0458712659,python,2,2
+s0003,Ernest,Rutherford,0462396286,information security&artificial intelligence&python,3,3
+s0004,Issac,Newton,0310589452,artificial intelligence,4,4
+s0005,Dorothy,Hodgkin,0488521675,information security,5,5
+s0006,Audrey,Cahn,0406735677,python,6,6
