@@ -9,12 +9,13 @@ This file contains the class definition for the HomePage class.
 import tkinter as tk
 
 # Local application imports
-from interface.receptionist_menu import ReceptionistMenu
+from interface.receptionist.receptionist_menu import ReceptionistMenu
+# from interface.main_window import MSMS
 from modules.user.ReceptionistUser import ReceptionistUser
 from modules.user.TeacherUser import TeacherUser
 from modules.user.AdultLearner import AdultLearner
-from interface.teacher_menu import TeacherMenu
-from interface.adult_learner_menu import AdultLearnerMenu
+from interface.teachers.teacher_menu import TeacherMenu
+from interface.students.adult_learner_menu import AdultLearnerMenu
 
 class HomePage(tk.Frame):
 
@@ -71,9 +72,8 @@ class HomePage(tk.Frame):
         self.login_button = tk.Button(master=self, text="Login", command=self.login)
         self.login_button.grid(row=5, columnspan=2, padx=10, pady=10)
 
-        # Button to shut down
-        self.shutdown_button = tk.Button(master=self, text="Shut down", command=master.destroy)
-        self.shutdown_button.grid(row=6, columnspan=2, padx=10, pady=10)
+        self.shutdown_button = tk.Button(master=self, text="Shut Down", command=master.destroy)
+        self.shutdown_button.grid(row=7, columnspan=2, padx=10, pady=10)
 
     def login(self):
         """
@@ -95,23 +95,30 @@ class HomePage(tk.Frame):
         # https://docs.python.org/3/library/functions.html#isinstance
         if isinstance(user, ReceptionistUser):
             self.alert_var.set("")
-            self.master.hide_homepage()
+            self.place_forget()
             receptionist_menu = ReceptionistMenu(master=self.master, receptionist_user = user)
             receptionist_menu.show_menu()
         elif isinstance(user, TeacherUser):
             self.alert_var.set("")
-            self.master.hide_homepage()
+            self.place_forget()
             teacher_menu = TeacherMenu(master=self.master, teacher_user = user)
             teacher_menu.show_menu()
         elif isinstance(user, AdultLearner):
             self.alert_var.set("")
-            self.master.hide_homepage()
+            self.place_forget()
             adult_learner_menu = AdultLearnerMenu(master=self.master, adult_learner_user = user)
             adult_learner_menu.show_menu()
         else:
             self.alert_var.set(f"The login attempt is not successful")
         self.username_entry.delete(0, tk.END)
         self.password_entry.delete(0, tk.END)
+
+    def show_homepage(self):
+        self.place_forget()
+        self.homepage.place(relx=.5, rely=.5, anchor=tk.CENTER)
+
+    def hide_homepage(self):
+        self.homepage.place_forget()
 		
 
 if __name__ == "__main__":

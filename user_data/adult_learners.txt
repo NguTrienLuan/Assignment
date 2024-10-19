@@ -1,6 +1,8 @@
-s0001,Albert,Einstein,0312565924,python&information security&artificial intelligence,1,1
-s0002,Marie,Curie,0458712659,python,2,2
-s0003,Ernest,Rutherford,0462396286,information security&artificial intelligence&python,3,3
-s0004,Issac,Newton,0310589452,artificial intelligence,4,4
-s0005,Dorothy,Hodgkin,0488521675,information security,5,5
-s0006,Audrey,Cahn,0406735677,python,6,6
+s0001,Albert,Einstein,13/06/2002,0312565924,Python&Information Security&Artificial Intelligence,1,1
+s0002,Marie,Curie,13/06/2002,0458712659,Python,2,2
+s0003,Ernest,Rutherford,13/06/2002,0462396286,Information Security&Artificial Intelligence&python,3,3
+s0004,Issac,Newton,13/06/2002,0310589452,Artificial Intelligence,4,4
+s0005,Dorothy,Hodgkin,13/06/2002,0488521675,Information Security,5,5
+s0006,Audrey,Cahn,13/06/2002,0406735677,Python,6,6
+s0007,Logan,Ngu,14/12/2005,3213213211,Python,32,32
+s0008,321,321,14/12/2005,3213213211,Artificial Intelligence&Python,32,32

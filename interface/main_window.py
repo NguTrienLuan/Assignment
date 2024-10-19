@@ -23,14 +23,19 @@ class MSMS(tk.Tk):
         super().__init__()
         super().title(title)
         super().geometry(f"{width}x{height}")
-
+        
         self.homepage = HomePage(master=self, image_path="./images/logo.png")
         self.show_homepage()
+
+
+        
 
     def show_homepage(self):
         """
         Displays the home page to make it visible in the main window.
         """
+
+
         self.homepage.place(relx=.5, rely=.5, anchor=tk.CENTER)
 
     def hide_homepage(self):

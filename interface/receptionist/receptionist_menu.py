@@ -9,6 +9,8 @@ This file contains the class definition for the ReceptionistMenu class.
 import tkinter as tk
 
 # Local application imports
+from interface.teacher_registion import TeacherRegistion
+from interface.adult_learner_registion import AdultLearnerRegistion
 from interface.search_teacher import SearchTeachers
 
 
@@ -34,14 +36,14 @@ class ReceptionistMenu(tk.Frame):
         self.label1 = tk.Label(self, text="Choose one of the following:")
         self.label1.pack(padx=10, pady=10)
 
-        self.register_btn = tk.Button(self, text="Register a student")
+        self.register_btn = tk.Button(self, text="Register a student", command=self.show_register_student)
+        self.register_btn.pack(padx=10, pady=10)
+
+        self.register_btn = tk.Button(self, text="Register a teacher", command=self.show_register_teacher)
         self.register_btn.pack(padx=10, pady=10)
 
         self.search_btn = tk.Button(self, text="Search teachers by instrument", command=self.show_search_teachers_frame)
         self.search_btn.pack(padx=10, pady=10)
-
-        self.class_btn = tk.Button(self, text="Create a weekly scheduled class")
-        self.class_btn.pack(padx=10, pady=10)
 
         self.logout_btn = tk.Button(self, text="Log out", command=self.logout)
         self.logout_btn.pack(padx=10, pady=10)
@@ -52,6 +54,16 @@ class ReceptionistMenu(tk.Frame):
         """
         search_teachers = SearchTeachers(self.master, self, self.receptionist_user)
         search_teachers.place(relx=.5, rely=.5, anchor=tk.CENTER)
+        self.hide_menu()
+
+    def show_register_student(self):
+        register_student = AdultLearnerRegistion(self.master, self, self.receptionist_user)
+        register_student.place(relx=.5, rely=.5, anchor=tk.CENTER)
+        self.hide_menu()
+
+    def show_register_teacher(self):
+        register_teacher = TeacherRegistion(self.master,self, self.receptionist_user)
+        register_teacher.place(relx=.5, rely=.5, anchor=tk.CENTER)
         self.hide_menu()
 
     def logout(self):
